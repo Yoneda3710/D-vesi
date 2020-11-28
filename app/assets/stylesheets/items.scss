@@ -1,0 +1,55 @@
+.header{
+  height: 30vh;
+  background-image: image-url('1283118_s.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.title h1 {
+  font-size: 60px;
+  color: white;
+  font-family: "Comic Sans MS";
+  padding-top: 20px;
+}
+.c1{
+  color: #0FF;
+}
+
+.title p {
+  font-size: 20px;
+  padding-top: 20px;
+  color: white;
+}
+
+
+.contents{
+  height: 60vh;
+  background-color: white;
+  text-align: center;
+}
+.contents h2 {
+  font-size: 20px;
+  color: red;
+  margin: 20px 0;
+}
+.item {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.item img {
+  width: 150px;
+  height: 150px;
+}
+.producer {
+  display: flex;
+}
+.producer img {
+  width: 80px;
+  height: 80px;
+}
+
+.footer{
+  height: 10vh;
+  background-color: green;
+}
