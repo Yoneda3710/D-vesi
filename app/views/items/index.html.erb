@@ -2,6 +2,12 @@
   <div class="title">
     <h1><span class="c1">D</span>-vesi</h1>
     <p>農家から直接野菜を購入しよう！</p>
+    <div class="btn">
+    <ul>
+      <li class="left"><%= link_to 'ログイン',new_customer_session_path %></li>
+      <li class="right"><%= link_to '新規登録',new_customer_registration_path %></li>
+    </ul>
+    </div>
   </div>
 </div>
 
@@ -27,5 +33,5 @@
 </div>
 
 <div class="footer">
-  <a helf="#">生産者の方はこちら</a>
+  <%= link_to '生産者の方はこちら', new_producer_session_path %>
 </div>

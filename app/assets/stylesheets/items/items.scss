@@ -14,12 +14,36 @@
 .c1{
   color: #0FF;
 }
-
 .title p {
   font-size: 20px;
   padding-top: 20px;
   color: white;
 }
+.btn ul {
+  display: flex;
+  justify-content: flex-end;
+}
+.left {
+  border: 1px red solid;
+  border-radius: 8px;
+  background-color: red;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+.right {
+  border: 1px fuchsia solid;
+  border-radius: 8px;
+  background-color:fuchsia;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+
+
+
 
 
 .contents{
@@ -52,4 +76,7 @@
 .footer{
   height: 10vh;
   background-color: green;
+}
+.footer a {
+  float :right;
 }
