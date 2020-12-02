@@ -9,7 +9,7 @@ class DeviseCreateProducers < ActiveRecord::Migration[6.0]
       t.string :kana_family_name,   null: false
       t.string :kana_first_name,    null: false
       t.date   :birthday,           null: false
-      t.integer :prefectures_id,    null: false
+      t.integer :prefecture_id,     null: false
       t.string :municipality,       null: false
       t.string :address,            null: false
       t.string :building

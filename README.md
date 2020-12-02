@@ -43,7 +43,8 @@
 | name          | string        | null: false                    |
 | description   | text          | null: false                    |
 | price         | integer       | null: false                    |
-| user          | references    | null: false, foreign_key: true | 
+| producer          | references    | null: false, foreign_key: true |
+| customer          | references    | null: false, foreign_key: true | 
 ### Association
 - belongs_to :customer
 - belongs_to :producer
