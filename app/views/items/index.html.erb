@@ -6,6 +6,7 @@
      <ul>
        <% if producer_signed_in? %>
         <li class="left"><%= link_to '商品を投稿する', new_item_path %>
+        <li class="center"><%= link_to 'マイページ' %>
         <li class="right"><%= link_to 'ログアウト', destroy_producer_session_path, method: :delete %>
        <% else %> 
         <li class="left"><%= link_to 'ログイン', new_customer_session_path %></li>
