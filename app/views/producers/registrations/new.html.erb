@@ -105,6 +105,18 @@
     </div>
     <%= f.text_field :phone_number, class:"input-default", id:"phone-number", placeholder:"例）09012345678",maxlength:"11"%>
   </div>
+  <div class="form-group">
+      <div class="weight-bold-text">
+        本人画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
   
   <div class="form-group">
     <p class='form-info-header'>

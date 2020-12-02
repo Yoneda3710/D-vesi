@@ -55,8 +55,10 @@ ActiveRecord::Schema.define(version: 2020_11_30_081340) do
     t.string "name", null: false
     t.string "description", null: false
     t.string "price", null: false
+    t.bigint "producer_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["producer_id"], name: "index_items_on_producer_id"
   end
 
   create_table "producers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -82,4 +84,5 @@ ActiveRecord::Schema.define(version: 2020_11_30_081340) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "items", "producers"
 end

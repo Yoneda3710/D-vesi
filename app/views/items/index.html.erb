@@ -4,8 +4,13 @@
     <p>農家から直接野菜を購入しよう！</p>
     <div class="btn">
      <ul>
-       <li class="left"><%= link_to 'ログイン',new_customer_session_path %></li>
-       <li class="right"><%= link_to '新規登録',new_customer_registration_path %></li>
+       <% if producer_signed_in? %>
+        <li class="left"><%= link_to '商品を投稿する', new_item_path %>
+        <li class="right"><%= link_to 'ログアウト', destroy_producer_session_path, method: :delete %>
+       <% else %> 
+        <li class="left"><%= link_to 'ログイン', new_customer_session_path %></li>
+        <li class="right"><%= link_to '新規登録', new_customer_registration_path %></li>
+       <% end %>
      </ul>
     </div>
   </div>
@@ -14,22 +19,26 @@
 <div class="contents">
   <h2>Pick Up</h2>
   <div class="items">
-    <div class="item">
-      <#img src="pr00021.jpg">
-      <div class="producer">
-        <p>訳あり野菜の詰め合わせです！無農薬です！</p>
-        <img src="./app/assets/images/621769_s.jpeg"> 
+    <% @item.each do |item| %>
+      <div class="item">
+        <div class="item-image">
+          <%= image_tag item.image.variant(resize: '350x350') %>
+          <p><%= item.name %></p>
+          <p><%= item.price %>円(税込)</p>
+        </div>
+        <div class="item-info">
+          <div class="bubble03">
+           <%= item.description %> 
+          </div>
+          <div class="producer">
+            <%= image_tag item.producer.image.variant(resize: '250x250'), class:"person" %>
+            <p><%= "#{item.producer.family_name}"+ "#{item.producer.first_name}" %></p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <#img src="pr00021.jpg">
-      <div class="producer">
-        <p>訳あり野菜の詰め合わせです！無農薬です！</p>
-        <img src="./app/assets/images/621769_s.jpeg"> 
-      </div>
-    </div>
-    
+    <% end %>
   </div>
+  <div class="push"></div>
 </div>
 
 <div class="footer">
