@@ -6,7 +6,7 @@
     <% @item.each do |item| %>
       <div class="item">
         <div class="item-image">
-          <%= image_tag item.image.variant(resize: '350x350') %>
+          <%= link_to image_tag(item.image, size: '250x250'), item_path(item.id) %>
           <p><%= item.name %></p>
           <p><%= item.price %>円(税込)</p>
         </div>
@@ -15,7 +15,7 @@
            <%= item.description %> 
           </div>
           <div class="producer">
-            <%= image_tag item.producer.image.variant(resize: '250x250'), class:"person" %>
+            <%= link_to image_tag(item.producer.image, size: '150x150'), producer_path(item.producer.id) %>
             <p><%= "#{item.producer.family_name}"+ "#{item.producer.first_name}" %></p>
           </div>
         </div>
