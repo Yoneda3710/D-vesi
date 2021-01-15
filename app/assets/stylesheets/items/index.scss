@@ -3,6 +3,7 @@ html, body {
   height: 100%;
   margin: 0;
 }
+.container { position: relative; width: 100%; height: auto !important; height: 100%; min-height: 100%; }
 
 .header{
   height: 30vh;
@@ -62,8 +63,6 @@ html, body {
 .contents{
   background-color: white;
   height: 60vh;
-  min-height: 100%;
-  margin-bottom: -50px;
   text-align: center;
 }
 .contents h2 {
@@ -105,6 +104,7 @@ html, body {
   background-color: #f39800;
   border-radius: 5px;
   height: 100px;
+  margin-right: 10px;
 }
 .bubble03:before {
   content: '';
@@ -134,8 +134,4 @@ html, body {
 .footer a {
   float :right;
   color :white;
-}
-.footer, 
-.push{
-  height: 50px;
 }

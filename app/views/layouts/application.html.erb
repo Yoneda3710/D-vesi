@@ -11,6 +11,7 @@
   </head>
 
   <body>
+  <div class='container'>
     <div class="header">
       <div class="title">
        <h1><span class="c1">D</span>-vesi</h1>
@@ -31,8 +32,9 @@
     </div>
     <%= yield %>
 
-  <div class="footer">
-    <%= link_to '生産者の方はこちら', new_producer_session_path %>
+    <div class="footer">
+      <%= link_to '生産者の方はこちら', new_producer_session_path %>
+    </div>
   </div>
   </body>
 </html>
