@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   before_action :find_item, only: :order
   def index
-    @item = Item.all
+    @item = Item.order(created_at: :desc).limit(5)
   end
 
   def new
