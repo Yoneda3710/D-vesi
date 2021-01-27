@@ -1,0 +1,13 @@
+<div class="history">
+  <div class='name'>
+    <%= @customer.nickname + "さんの購入履歴" %>
+  </div>
+
+  <div class="history-item">
+    <% if @customer.item_order.item.id == nil%>
+      <h1>購入した商品はありません</h1>
+    <% else %>
+      <%= link_to image_tag(@customer.item_order.itme) %>
+    <% end %>
+  </div>
+</div>
