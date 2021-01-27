@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  before_action :set_order, only:[:index, :create]
+
   def index
     @order = Item.find(params[:item_id])
   end
@@ -17,6 +19,11 @@ class OrdersController < ApplicationController
 
   def order_params
     params.require(:order).permit(:price)
+  end
+  
+
+  def set_order
+    @order = Item.find(params[:item_id])
   end
 
 end
