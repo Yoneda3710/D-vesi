@@ -36,7 +36,11 @@
     <%= yield %>
 
     <div class="footer">
+    <% if customer_signed_in? && current_customer.card == nil %>
+      <%= link_to 'クレジットカードを登録する', new_card_path %>
+    <% elseif !customer_signed_in? %>
       <%= link_to '生産者の方はこちら', new_producer_session_path %>
+    <% end %>
     </div>
   </div>
   </body>

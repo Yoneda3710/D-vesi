@@ -6,7 +6,7 @@
 <div class="main">
   <% @items.each do |item| %>
     <div class="producer-items">
-      <%= image_tag item.image.variant(resize: '200x200') %>
+      <%= link_to image_tag(item.image, size: '200x200'), item_path(item.id) %>
       <p class="name"><%= item.name %></p>
     </div>
   <% end %>
